@@ -1,0 +1,30 @@
+nav {
+  height: 120px;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  position: fixed;
+}
+
+.logo {
+  font-family: 'Bungee', cursive;
+  margin-left: 1.5em;
+
+}
+
+.writeNewTweet {
+  position: absolute;
+  float: right;
+  right: 1.5em;
+}
+
+.newTweetArrow {
+  position: absolute;
+  top: 60px;
+  left: 80px;
+  color: red;
+}
+
