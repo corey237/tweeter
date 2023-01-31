@@ -45,9 +45,19 @@ main {
 .tweetBtn {
   background-color: #4056A1;
   color: white;
-  font-family: 'Bungee', cursive;
 }
 
-.counter {
+.tweetCharCount {
   font-family: 'Bungee', cursive;
+  display: flex;
+  justify-content:space-between;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid black;
+  background-color: transparent;
+  font-weight: bold;
+  outline: none;
 }
