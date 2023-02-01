@@ -39,7 +39,7 @@
         <p><strong>Write</strong> a new tweet</p>
       </div>
     </nav>
-    <header>
+    <header class="profile">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -53,7 +53,6 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets" enctype="application/x-www-form-urlencoded">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
@@ -62,9 +61,30 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section> 
+      <section>
+        <article class="tweet">
+          <header class="header">
+            <div class="avatarContainer">
+              <i class="fa-solid fa-user-tie tweetAvatar"></i>
+              <p>Test</p>
+            </div>
+            <p>@Username</p>
+          </header>
+          <p class="tweetContent">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet laboriosam sed et harum illum. Temporibus eos tempore ad maiores ex eligendi, sequi eius aperiam aut officia quis amet voluptas aliquid.</p>
+          <footer class="tweetFooter">
+            <p class="days">10 days ago</p>
+            <div class="icons">
+              <i class="fa-solid fa-flag report"></i>
+              <i class="fa-solid fa-retweet retweet"></i>
+              <i class="fa-solid fa-heart favourite"></i>
+            </div>
+          </footer>
+        </article>
       </section>
     </main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="scripts/composer-char-counter.js"></script>
+    
   </body>
 </html>

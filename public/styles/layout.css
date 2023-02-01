@@ -33,8 +33,12 @@ body {
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  width: 65%;
+  margin: auto;
 }
+
 
 .tweetIntro {
   border-bottom: 2px solid black;
@@ -60,4 +64,61 @@ textarea {
   background-color: transparent;
   font-weight: bold;
   outline: none;
+}
+
+.tweet {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid black;
+  padding: 3px 15px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.tweet:hover {
+  box-shadow: 7px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.tweetContent {
+  padding-top: 30px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.avatarContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.tweetFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 3px solid black;
+}
+
+.retweet:hover {
+  color: #4056A1;
+}
+
+.favourite:hover {
+  color: red;
+}
+
+.report:hover {
+  color: rgb(126, 13, 13);
+}
+
+.new-tweet {
+  margin-top: 20px;
 }
