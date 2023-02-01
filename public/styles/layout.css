@@ -25,11 +25,10 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-/* .container {
-  width: 90%;
-  background-color: #f4f1ec;
-  margin-left: 100px;
-} */
+
+
+
+/* <-- Contains area to write new tweet as well as tweet feed --> */
 
 main {
   display: flex;
@@ -40,22 +39,25 @@ main {
 }
 
 
-.tweetIntro {
-  border-bottom: 2px solid black;
-  border-spacing: 10px;
-  padding-bottom: 10px;
-}
+/* <-- Styling for tweet button --> */
 
 .tweetBtn {
   background-color: #4056A1;
   color: white;
 }
 
+
+/* <-- Styling for character counter --> */
+
 .tweetCharCount {
   font-family: 'Bungee', cursive;
   display: flex;
   justify-content:space-between;
+  padding-top: 20px;
+  margin-bottom: 60px;
 }
+
+
 
 textarea {
   width: 100%;
