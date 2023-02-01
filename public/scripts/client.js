@@ -45,7 +45,7 @@ $(document).ready(function() {
       </header>
       <p class="tweetContent">${tweetObj.content.text}</p>
       <footer class="tweetFooter">
-        <p class="days">${tweetObj.created_at}</p>
+        <p class="days">${timeago.format(tweetObj.created_at)}</p>
         <div class="icons">
            <i class="fa-solid fa-flag report"></i>
            <i class="fa-solid fa-retweet retweet"></i>
@@ -60,9 +60,33 @@ $(document).ready(function() {
   const renderTweets = function(tweetsArr) {
     for (const tweet of tweetsArr) {
       const tweetHtml = createTweetElement(tweet);
-      $('.new-tweet').append(tweetHtml);
+      $('#tweets-container').prepend(tweetHtml);
     }
   }
 
-  renderTweets(exampleTweet);
+  const loadTweets = function() {
+    $.get('/tweets')
+    .then((data) => {
+      $('#tweets-container').empty();
+      renderTweets(data);
+    })
+  }
+
+  $('#tweet-form').on('submit', function (event) {
+    event.preventDefault();
+    if ($('#tweet-text').val().length > 140) {
+      alert('Error. Please ensure character count is below 140');
+      return;
+    }
+    if ($('#tweet-text').val().length === 0) {
+      alert('Error. No tweet detected');
+      return;
+    }
+    const data = $(this).serialize();
+    $.post('/tweets', data)
+    .then(() => {
+      loadTweets();
+    })
+  })
+  loadTweets();
 })
