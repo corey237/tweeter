@@ -14,31 +14,7 @@ $(document).ready(function() {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-  
-  const exampleTweet = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1675091713200
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1675178113200
-    }
-  ];
+
   const createTweetElement = function(tweetObj) {
     const tweetStructure = `
     <article class="tweet">
@@ -81,18 +57,22 @@ $(document).ready(function() {
   $('#tweet-form').on('submit', function (event) {
     event.preventDefault();
     if ($('#tweet-text').val().length > 140) {
-      alert('Error. Please ensure character count is below 140');
+      $('#error-block').html('Error. Character count over 140');
+      $('#error-block').addClass('error-block')
       return;
-    }
-    if ($('#tweet-text').val().length === 0) {
-      alert('Error. No tweet detected');
+    } else if ($('#tweet-text').val().length === 0) {
+      $('#error-block').html('Error: No text found.');
+      $('#error-block').addClass('error-block')
       return;
+    } else {
+      $('#error-block').html('');
+      $('#error-block').removeClass('error-block')
+      const data = $(this).serialize();
+      $.post('/tweets', data)
+      .then(() => { 
+        loadTweets();
+      })
     }
-    const data = $(this).serialize();
-    $.post('/tweets', data)
-    .then(() => {
-      loadTweets();
-    })
   })
   loadTweets();
 })

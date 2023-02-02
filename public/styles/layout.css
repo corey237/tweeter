@@ -124,3 +124,17 @@ textarea {
 .new-tweet {
   margin-top: 20px;
 }
+
+#error-noText {
+  color: red;
+  text-align: center;
+  border: 2px solid red;
+  display: none;
+}
+
+.error-block {
+  color: red;
+  text-align: center;
+  border: 2px solid red;
+  padding: 10px;
+}
