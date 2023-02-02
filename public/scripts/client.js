@@ -9,6 +9,12 @@
 
 
 $(document).ready(function() {
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   const exampleTweet = [
     {
       "user": {
@@ -38,14 +44,14 @@ $(document).ready(function() {
     <article class="tweet">
       <header class="header">
       <div class="avatarContainer">
-      <img src="${tweetObj.user.avatars}" alt="User's profile picture"
-        <p>${tweetObj.user.name}</p>
+      <img src="${escape(tweetObj.user.avatars)}" alt="User's profile picture"
+        <p>${escape(tweetObj.user.name)}</p>
       </div>
-      <p>${tweetObj.user.handle}</p>
+      <p>${escape(tweetObj.user.handle)}</p>
       </header>
-      <p class="tweetContent">${tweetObj.content.text}</p>
+      <p class="tweetContent">${escape(tweetObj.content.text)}</p>
       <footer class="tweetFooter">
-        <p class="days">${timeago.format(tweetObj.created_at)}</p>
+        <p class="days">${escape(timeago.format(tweetObj.created_at))}</p>
         <div class="icons">
            <i class="fa-solid fa-flag report"></i>
            <i class="fa-solid fa-retweet retweet"></i>
