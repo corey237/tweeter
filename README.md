@@ -12,6 +12,20 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+## Final Product
+
+Example of Writing a Tweet
+
+!["Example of Writing a Tweet"]( "Writing a Tweet")
+
+Creating a new Short URL
+
+!["Tweet loaded into the User's Feed"]( "Create URL Page")
+
+Displaying Short URL's That Have Been Created
+
+!["Example of Error Handling"]( "URL List Page")
+
 ## Dependencies
 
 - Express
