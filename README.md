@@ -18,11 +18,11 @@ Example of Writing a Tweet
 
 !["Example of Writing a Tweet"](https://github.com/corey237/tweeter/blob/master/docs/writingTweet.PNG?raw=true "Writing a Tweet")
 
-Creating a new Short URL
+Example of Tweet loaded into the User's Feed
 
 !["Tweet loaded into the User's Feed"](https://github.com/corey237/tweeter/blob/master/docs/loadedTweet.PNG?raw=true "Create URL Page")
 
-Displaying Short URL's That Have Been Created
+Example of Error Handling
 
 !["Example of Error Handling"](https://github.com/corey237/tweeter/blob/master/docs/errorMessage.PNG?raw=true "URL List Page")
 
