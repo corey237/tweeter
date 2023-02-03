@@ -74,5 +74,15 @@ $(document).ready(function() {
       })
     }
   })
+
+  $('.new-tweet').hide();
+
+  $('.newTweetArrow').click(function () {
+    if ($('.new-tweet').is(':hidden')) {
+      $('.new-tweet').show();
+    } else {
+      $('.new-tweet').hide();
+    }
+  })
   loadTweets();
 })
