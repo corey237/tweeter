@@ -4,7 +4,6 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
-    
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
     
@@ -32,9 +31,7 @@
     <!--Link for Timeago library-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
-
   <body>
-    <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo">tweeter</span>
         <div class="writeNewTweet">
@@ -52,16 +49,9 @@
           <h2>Your Name</h2>
       </div>
     </header>
-    
-
-    <!-- Page-specific (main) content here -->
     <section class="container">
       <section class="new-tweet">
         <form id="tweet-form">
-          <!-- <p id="error-block"></p> -->
-
-<!--           <p id="error-noText">❗ 'Error. No tweet detected' ❗</p>
-          <p id="error-tooManyChar">❗ 'Error. Please ensure character count is below 140' ❗</p> -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?" rows="1"></textarea>
           <div class="tweetCharCount">
             <button type="submit" class="tweetBtn">Tweet</button>
