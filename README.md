@@ -16,15 +16,15 @@ This repository is the starter code for the project: Students will fork and clon
 
 Example of Writing a Tweet
 
-!["Example of Writing a Tweet"]( "Writing a Tweet")
+!["Example of Writing a Tweet"](https://github.com/corey237/tweeter/blob/master/docs/writingTweet.PNG?raw=true "Writing a Tweet")
 
 Creating a new Short URL
 
-!["Tweet loaded into the User's Feed"]( "Create URL Page")
+!["Tweet loaded into the User's Feed"](https://github.com/corey237/tweeter/blob/master/docs/loadedTweet.PNG?raw=true "Create URL Page")
 
 Displaying Short URL's That Have Been Created
 
-!["Example of Error Handling"]( "URL List Page")
+!["Example of Error Handling"](https://github.com/corey237/tweeter/blob/master/docs/errorMessage.PNG?raw=true "URL List Page")
 
 ## Dependencies
 
