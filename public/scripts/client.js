@@ -53,16 +53,16 @@ $(document).ready(function() {
   $('#tweet-form').on('submit', function (event) {
     event.preventDefault();
     if ($('#tweet-text').val().length > 140) {
-      $('#error-block').html('Error. Character count over 140');
-      $('#error-block').addClass('error-block')
+      $('.error-block').html('Error. Character count over 140');
+      $('.error-block').show()
       return;
     } else if ($('#tweet-text').val().length === 0) {
-      $('#error-block').html('Error: No text found.');
-      $('#error-block').addClass('error-block')
+      $('.error-block').html('Error: No text found.');
+      $('.error-block').show()
       return;
     } else {
       $('#error-block').html('');
-      $('#error-block').removeClass('error-block')
+      $('.error-block').hide()
       const data = $(this).serialize();
       $.post('/tweets', data)
       .then(() => { 
