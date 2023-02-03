@@ -63,7 +63,7 @@ main {
 }
 
 
-
+/* STYLING FOR NEW TWEET TEXT AREA */
 textarea {
   width: 100%;
   border: none;
@@ -73,6 +73,7 @@ textarea {
   outline: none;
 }
 
+/* STYLING FOR INDIVIDUAL TWEETS */
 .tweet {
   width: 100%;
   display: flex;
@@ -84,15 +85,19 @@ textarea {
   margin-bottom: 50px;
 }
 
+/* ADDS SHADOW TO TWEETS ON HOVER */
 .tweet:hover {
   box-shadow: 7px 4px 5px rgba(0, 0, 0, 0.3);
 }
 
 
+/* USED FOR POSITIONING TWEET CONTENT */
 .tweetContent {
   padding-top: 30px;
 }
 
+
+/* POSITIONING FOR TWEET HEADER (NAME, AVATAR & USERNAME/HANDLE) */
 .header {
   display: flex;
   flex-direction: row;
@@ -100,6 +105,8 @@ textarea {
   align-items: center;
 }
 
+
+/* POSITIONING FOR TWEET AVATAR & NAME*/
 .avatarContainer {
   display: flex;
   flex-direction: row;
@@ -107,6 +114,7 @@ textarea {
   gap: 20px;
 }
 
+/* STYLING FOR TWEET FOOTER (DAYS SINCE TWEET, REPORT/RETWEET/FAVOURTE BUTTONS) */
 .tweetFooter {
   display: flex;
   align-items: center;
@@ -114,6 +122,7 @@ textarea {
   border-top: 3px solid black;
 }
 
+/* HOVER EFFECTS FOR REPORT/RETWEET/FAVOURITE BUTTONS */
 .retweet:hover {
   color: #4056A1;
 }
@@ -127,7 +136,7 @@ textarea {
 }
 
 
-
+/* STYLING FOR ERROR MESSAGES */
 #error-noText {
   color: red;
   text-align: center;
@@ -147,6 +156,9 @@ textarea {
   height: 120px;
 }
 
+
+
+/* MEDIA QUERIES FOR DESKTOP VIEW */
 
 @media only screen and (max-width: 1023px) {
   .container {

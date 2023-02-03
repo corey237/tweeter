@@ -1,3 +1,5 @@
+
+/* STYLING FOR TOP NAV BAR */
 nav {
   height: 120px;
   background-color: #4056A1;
@@ -10,25 +12,34 @@ nav {
   top: 0;
 }
 
+/* STYLING FOR TWEETER LOGO */
 .logo {
   font-family: 'Bungee', cursive;
   margin-left: 1.5em;
 
 }
 
+
+/* POSITIONING FOR "WRITE A NEW TWEET" TEXT & BUTTON */
 .writeNewTweet {
   position: absolute;
   float: right;
   right: 1.5em;
+  
 }
 
+
+/* STYLING FOR WRITE A NEW TWEET ERROR */
 .newTweetArrow {
   position: absolute;
   top: 55px;
   left: 80px;
   color: red;
+  animation: 3s linear
 }
 
+
+/* HOVER EFFECT FOR WRITE A NEW TWEET BUTTON TO SHOW ITS CLICKABLE */
 .newTweetArrow:hover {
   box-shadow: 0px 1px 8px 3px #FF0000;
 }

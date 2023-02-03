@@ -9,12 +9,15 @@
 
 
 $(document).ready(function() {
+  
+  //FUNCTION FOR DATA CLEANING/CROSS SITE SCRIPTING PREVENTION
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  //FUNCTION FOR CREATING HTML ELEMENT CONTAINING TWEET DATA FROM DATABASE
   const createTweetElement = function(tweetObj) {
     const tweetStructure = `
     <article class="tweet">
@@ -39,6 +42,7 @@ $(document).ready(function() {
     return tweetStructure;
   }
 
+  //FUNCTION FOR LOOPING THROUGH DATABASE AND CREATING TWEET ELEMENTS
   const renderTweets = function(tweetsArr) {
     for (const tweet of tweetsArr) {
       const tweetHtml = createTweetElement(tweet);
@@ -46,6 +50,7 @@ $(document).ready(function() {
     }
   }
 
+  //FUNCTION FOR CLEARING DOM OF OLD TWEET DATA AND LOADING NEW CONTENT
   const loadTweets = function() {
     $.get('/tweets')
     .then((data) => {
@@ -54,6 +59,7 @@ $(document).ready(function() {
     })
   }
 
+  //CHECK NEW TWEET FOR ERRORS, POST DATA IF OK AND RUN LOAD TWEETS FUNCTION
   $('#tweet-form').on('submit', function (event) {
     event.preventDefault();
     if ($('#tweet-text').val().length > 140) {
@@ -75,6 +81,7 @@ $(document).ready(function() {
     }
   })
 
+  //TOGGLE FOR WRITE A TWEET SECTION (HIDE ON INITIAL LOAD, SHOW IF THE WRITE A NEW TWEET BUTTON IS CLICKED)
   $('.new-tweet').hide();
 
   $('.newTweetArrow').click(function () {
