@@ -73,8 +73,7 @@ $(document).ready(function() {
     }
   })
 
-  //TOGGLE FOR WRITE A TWEET SECTION (HIDE ON INITIAL LOAD, SHOW IF THE WRITE A NEW TWEET BUTTON IS CLICKED)
-  $('.new-tweet').hide();
+  //TOGGLE FOR WRITE A TWEET SECTION
 
   $('.newTweetArrow').click(function () {
     if ($('.new-tweet').is(':hidden')) {
