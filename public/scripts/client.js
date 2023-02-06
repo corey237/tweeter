@@ -61,11 +61,13 @@ $(document).ready(function() {
       $('.error-block').show()
       return;
     } else {
-      $('#error-block').html('');
+      $('.error-block').html('');
       $('.error-block').hide()
       const data = $(this).serialize();
       $.post('/tweets', data)
       .then(() => { 
+        $('textarea').val('')
+        $('.counter').val('140');
         loadTweets();
       })
     }

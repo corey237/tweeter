@@ -34,8 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 65%;
-  margin: auto;
+  margin: 0 3rem 0 3rem;
 }
 
 main {
@@ -83,6 +82,7 @@ textarea {
   padding: 3px 15px;
   margin-top: 20px;
   margin-bottom: 50px;
+  word-wrap: break-word;
 }
 
 /* ADDS SHADOW TO TWEETS ON HOVER */
@@ -175,25 +175,31 @@ textarea {
     margin-bottom: 120px;
     width: 100%;
   }
-  .profile {
-    margin-left: 100px;
-    width: 56%;
-    height: 450px;
-  }
-
+  
   main {
+    display: flex;
+    justify-content: space-between;
     margin-top: 200px;
     flex-direction: row;
   }
-
+  
+  .profile {
+    height: 450px;
+    flex: 0.5;
+    min-width: 30%;
+    max-width: 30%; 
+    margin: 0 -4rem 0 10rem;
+  }
   .new-tweet {
-    width: 100%;
+    /* width: 100%; */
     margin-bottom: -40px;
   }
   .container {
-    margin-left: 220px;
-    margin-right: 30px;
+    flex: 0.5;
+    min-width: 45%;
+    max-width: 45%;
+    margin: 0 4rem 0 -4rem;
+    padding-top: 0;
   }
-
 
 }
